@@ -31,12 +31,12 @@ and also use these namespaces to match catalog entries.
 
 The dynamic pipeline and the catalog using data factories is compatible with kedro-viz. The pipeline looks like this,
 
-![dynamic kedro viz](./img/dynamic_kedro_viz.svg)
+![dynamic kedro viz](img/dynamic_kedro_viz.svg)
 
 When fully expanded, we can highlight dynamic datasets and confirm that they are matched to entries in our
 `DataCatalog`. 
 
-![kedro viz expanded highlight dataset](./img/dynamic_pipeline_expanded_highlight_dataset.png)
+![kedro viz expanded highlight dataset](img/dynamic_pipeline_expanded_highlight_dataset.png)
 
 # About implementation
 
