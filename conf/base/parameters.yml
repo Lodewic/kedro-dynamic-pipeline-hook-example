@@ -1,3 +1,25 @@
+# Define multiple models parameters. Each of the entries under 'models' will dynamically create a namespaced pipeline
+# specific to that model.
 train_fraction: 0.8
 random_state: 3
 target_column: species
+
+models:
+  nearest_neighbors:
+    class: sklearn.neighbors.KNeighborsClassifier
+    model_kwargs:
+      n_neighbors: 3
+  linear_svm:
+    class: sklearn.svm.SVC
+    model_kwargs:
+      kernel: linear
+      C: 0.025
+  decision_tree:
+    class: sklearn.tree.DecisionTreeClassifier
+    model_kwargs:
+      max_depth: 3
+#  neural_net:  # uncomment to add another pipeline for this model
+#    class: sklearn.neural_network.MLPClassifier
+#    model_kwargs:
+#      alpha: 1
+#      max_iter: 300
