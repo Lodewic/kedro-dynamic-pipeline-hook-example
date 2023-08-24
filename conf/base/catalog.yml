@@ -41,7 +41,14 @@
 #
 # This is a data set used by the "Hello World" example pipeline provided with the project
 # template. Please feel free to remove it once you remove the example pipeline.
-
 example_iris_data:
   type: pandas.CSVDataSet
   filepath: data/01_raw/iris.csv
+
+models.{namespace}.fitted_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/{namespace}_model.pkl
+
+models.{namespace}.model_score:
+  type: json.JSONDataSet
+  filepath: data/06_models/{namespace}_model_score.json
