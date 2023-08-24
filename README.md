@@ -2,8 +2,10 @@
 
 # kedro-dynamic-pipeline-hook-example
 
-Run the example as follows,
+Run the example as follows, from within your python environment of choice,
 ```bash
+git clone https://github.com/Lodewic/kedro-dynamic-pipeline-hook-example.git
+cd kedro-dynamic-pipeline-hook-example
 pip install ./src/
 kedro run
 ```
