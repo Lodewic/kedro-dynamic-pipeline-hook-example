@@ -27,6 +27,8 @@ As a bonus, because dynamically creating pipelines also involves creating dynami
 leverage the recent Data Factories to match datasets. Specifically, we can use dynamic namespaces for pipelines
 and also use these namespaces to match catalog entries. 
 
+
+
 ## Kedro-viz output
 
 The dynamic pipeline and the catalog using data factories is compatible with kedro-viz. The pipeline looks like this,
@@ -45,6 +47,11 @@ output. The second commit contains most of the changes compared to the default n
 the changes to make this example work.
 
 Here I'll briefly describe the changes required and how they work together.
+
+| :warning: `kedro registry describe` breaks |
+|:---------------------------|
+| Because the pipeline registry only exists after the `after_catalog_created` hook triggers, the CLI command for  `kedro registry describe` breaks in this implementation |
+
 
 ## Hook
 
